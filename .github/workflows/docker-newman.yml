@@ -33,6 +33,7 @@ jobs:
             -p 8000:8000 \
             -e AUTH_TOKEN=local-dev-token \
             fit4110/access-gate:lab04
+          sleep 5
 
       - name: Wait for service health
         run: npx wait-on http://localhost:8000/health --timeout 60000
